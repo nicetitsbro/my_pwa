@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0D47A1">
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <link rel="apple-touch-icon" href="icon-192.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финансовые советы</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .advice-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(25, 118, 210, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .advice-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(25, 118, 210, 0.15);
+        }
+        
+        .advice-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .advice-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .advice-title {
+            color: var(--dark-blue);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .advice-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .advice-item {
+            background: var(--light-blue);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+        
+        .advice-item h3 {
+            color: var(--dark-blue);
+            margin-top: 0;
+        }
+        
+        .advice-item p {
+            margin-bottom: 0;
+        }
+        
+        .quote-block {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .advice-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+	    <div class="logo-container">
+            <h1>Finance up</h1>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="revenue.html">Доходы</a>
+            <a href="expenses.html">Расходы</a>
+            <a href="feedback.php">Обратная связь</a>
+            <a href="tips.html" class="active">Советы</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="welcome-card">
+            <h2>Финансовые советы для вашего бизнеса</h2>
+            <p>Экспертные рекомендации по управлению финансами предприятия</p>
+        </div>
+
+        <div class="advice-section">
+            <div class="advice-header">
+                <div class="advice-icon">1</div>
+                <h2 class="advice-title">Бюджетирование и планирование</h2>
+            </div>
+            <div class="advice-content">
+                <div class="advice-item">
+                    <h3>Составляйте бюджет на год вперед</h3>
+                    <p>Разбейте год на кварталы и месяцы. Учитывайте сезонные колебания доходов и расходов.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Используйте метод "50/30/20"</h3>
+                    <p>50% доходов - основные расходы, 30% - развитие бизнеса, 20% - резервный фонд.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Автоматизируйте планирование</h3>
+                    <p>Используйте специальные программы для прогнозирования денежных потоков.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Регулярно пересматривайте планы</h3>
+                    <p>Раз в квартал анализируйте выполнение бюджета и корректируйте его при необходимости.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            "Бюджет говорит вашим деньгам, куда им идти, вместо того чтобы удивляться, куда они делись." — Джон Максвелл
+        </div>
+
+        <div class="advice-section">
+            <div class="advice-header">
+                <div class="advice-icon">2</div>
+                <h2 class="advice-title">Контроль расходов</h2>
+            </div>
+            <div class="advice-content">
+                <div class="advice-item">
+                    <h3>Разделяйте личные и бизнес-финансы</h3>
+                    <p>Никогда не смешивайте. Открывайте отдельные банковские счета.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Ведите учет всех расходов</h3>
+                    <p>Даже мелкие траты должны быть зафиксированы. Используйте мобильные приложения для учета.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Анализируйте статьи расходов</h3>
+                    <p>Выявляйте, на что уходит больше всего денег, и ищите способы оптимизации.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Договаривайтесь о скидках</h3>
+                    <p>При долгосрочном сотрудничестве с поставщиками всегда можно получить выгодные условия.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="advice-section">
+            <div class="advice-header">
+                <div class="advice-icon">3</div>
+                <h2 class="advice-title">Оптимизация налогов</h2>
+            </div>
+            <div class="advice-content">
+                <div class="advice-item">
+                    <h3>Выбирайте оптимальную систему налогообложения</h3>
+                    <p>УСН, патент или ОСНО - консультируйтесь с бухгалтером для выбора лучшего варианта.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Планируйте налоговые платежи заранее</h3>
+                    <p>Откладывайте деньги на налоги с каждого поступления.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Используйте законные льготы</h3>
+                    <p>Узнайте о налоговых каникулах и других преференциях для вашего бизнеса.</p>
+                </div>
+                <div class="advice-item">
+                    <h3>Документируйте все операции</h3>
+                    <p>Правильное оформление документов защитит вас при налоговых проверках.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Финансовый учёт | Контакты: 8-932-254-65-06</p>
+    </footer>
+</body>
+</html>

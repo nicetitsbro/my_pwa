@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Учёт расходов</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0D47A1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Finance up</h1>
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="revenue.html">Доходы</a>
+            <a href="expenses.html">Расходы</a>
+            <a href="feedback.php">Обратная связь</a>
+			<a href="tips.html">Советы</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Учёт расходов</h2>
+        
+        <div class="form-group">
+            <input type="date" id="expense-date">
+            <select id="expense-category">
+                <option value="Аренда">Аренда</option>
+                <option value="Зарплаты">Зарплаты</option>
+                <option value="Коммунальные">Коммунальные</option>
+                <option value="Оборудование">Оборудование</option>
+                <option value="Другое">Другое</option>
+            </select>
+            <input type="number" id="expense-amount" placeholder="Сумма (₽)">
+            <button onclick="addExpense()">Добавить</button>
+        </div>
+
+        <div class="table-container">
+            <table id="expense-table">
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Категория</th>
+                        <th>Сумма</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-list">
+                </tbody>
+            </table>
+            <button onclick="deleteSelected('expense')">Удалить выбранные</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Финансовый учёт | Контакты: 8-932-254-65-06</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadExpenseData();
+        });
+    </script>
+</body>
+</html>
